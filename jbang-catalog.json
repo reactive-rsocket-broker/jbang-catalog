@@ -1,0 +1,7 @@
+{
+  "aliases": {
+    "BrokerClient": {
+      "script-ref": "src/jbang/hello/RSocketBrokerClient.java"
+    }
+  }
+}
