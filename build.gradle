@@ -23,7 +23,7 @@ dependencies {
   // implementations for hello source set
   helloImplementation "org.slf4j:slf4j-simple:1.7.30"
   helloImplementation "org.projectlombok:lombok:1.18.18"
-  helloImplementation "com.alibaba.rsocket:alibaba-rsocket-core:1.0.0"
+  helloImplementation "com.alibaba.rsocket:alibaba-rsocket-core:1.0.1"
   helloAnnotationProcessor 'org.projectlombok:lombok:1.18.18'
 }
 
