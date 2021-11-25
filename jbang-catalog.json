@@ -7,7 +7,7 @@
     "rsocket-broker": {
       "script-ref": "https://repo1.maven.org/maven2/com/alibaba/rsocket/alibaba-broker-server/1.1.2/alibaba-broker-server-1.1.2.jar",
       "description": "Start Alibaba Broker Server",
-      "java": "1.8"
+      "java": "8"
     }
   }
 }
