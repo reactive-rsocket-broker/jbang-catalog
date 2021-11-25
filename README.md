@@ -1,9 +1,16 @@
-jbang examples for Alibaba RSocket Broker
+Alibaba RSocket Broker JBang Catalog
 =========================================
 
-# Examples
+To list the latest available artifacts in the Alibaba RSocket Broker JBang's catalog, run the following:
 
-* Broker Client `jbang BrokerClient`
+```
+jbang catalog list alibaba-rsocket-broker
+```
+
+# Alibaba RSocket Broker JBang Projects
+
+* RSocket Broker: `jbang rsocket-broker@alibaba-rsocket-broker`
+* Broker Client `jbang BrokerClient@alibaba-rsocket-broker`
 
 # References
 
