@@ -7,7 +7,6 @@ java {
 
 repositories {
   mavenLocal()
-  jcenter()
 }
 
 configurations {
@@ -17,14 +16,14 @@ configurations {
 
 dependencies {
   //implementations for main source set
-  implementation "org.slf4j:slf4j-simple:1.7.30"
-  implementation "org.projectlombok:lombok:1.18.18"
-  annotationProcessor "org.projectlombok:lombok:1.18.18"
+  implementation "org.slf4j:slf4j-simple:1.7.32"
+  implementation "org.projectlombok:lombok:1.18.22"
+  annotationProcessor "org.projectlombok:lombok:1.18.22"
   // implementations for hello source set
-  helloImplementation "org.slf4j:slf4j-simple:1.7.30"
-  helloImplementation "org.projectlombok:lombok:1.18.18"
-  helloImplementation "com.alibaba.rsocket:alibaba-rsocket-core:1.0.1"
-  helloAnnotationProcessor 'org.projectlombok:lombok:1.18.18'
+  helloImplementation "org.slf4j:slf4j-simple:1.7.32"
+  helloImplementation "org.projectlombok:lombok:1.18.22"
+  helloImplementation "com.alibaba.rsocket:alibaba-rsocket-core:1.1.2"
+  helloAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
 }
 
 sourceSets {
