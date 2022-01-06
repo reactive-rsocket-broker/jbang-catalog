@@ -9,9 +9,33 @@ repositories {
   mavenLocal()
 }
 
-configurations {
-  helloImplementation
-  helloAnnotationProcessor
+sourceSets {
+  main {
+    java {
+      srcDirs = ['src/main/java']
+    }
+  }
+  brokerSimpleClient {
+    java {
+      srcDirs = ['src/brokerSimpleClient/java']
+    }
+  }
+  brokerService {
+    java {
+      srcDirs = ['src/brokerService/java']
+    }
+    resources {
+      srcDirs = ["src/brokerService/resources"]
+    }
+  }
+  brokerConsumer {
+    java {
+      srcDirs = ['src/brokerConsumer/java']
+    }
+    resources {
+      srcDirs = ["src/brokerConsumer/resources"]
+    }
+  }
 }
 
 dependencies {
@@ -19,22 +43,23 @@ dependencies {
   implementation "org.slf4j:slf4j-simple:1.7.32"
   implementation "org.projectlombok:lombok:1.18.22"
   annotationProcessor "org.projectlombok:lombok:1.18.22"
-  // implementations for hello source set
-  helloImplementation "org.slf4j:slf4j-simple:1.7.32"
-  helloImplementation "org.projectlombok:lombok:1.18.22"
-  helloImplementation "com.alibaba.rsocket:alibaba-rsocket-core:1.1.2"
-  helloAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
+  // implementations for broker simple client
+  brokerSimpleClientImplementation "org.slf4j:slf4j-simple:1.7.32"
+  brokerSimpleClientImplementation "org.projectlombok:lombok:1.18.22"
+  brokerSimpleClientImplementation "com.alibaba.rsocket:alibaba-rsocket-core:1.1.2"
+  brokerSimpleClientAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
+  // implementations for broker service
+  brokerServiceImplementation platform('org.springframework.boot:spring-boot-dependencies:2.6.2')
+  brokerServiceImplementation 'io.netty:netty-transport-native-unix-common:4.1.72.Final'
+  brokerServiceImplementation 'org.springframework.boot:spring-boot-starter-webflux'
+  brokerServiceImplementation 'org.springframework.boot:spring-boot-starter-actuator'
+  brokerServiceImplementation 'com.alibaba.rsocket:alibaba-rsocket-spring-boot-starter:1.1.2'
+  // implementations for broker consumer
+  brokerConsumerImplementation platform('org.springframework.boot:spring-boot-dependencies:2.6.2')
+  brokerConsumerImplementation 'io.netty:netty-transport-native-unix-common:4.1.72.Final'
+  brokerConsumerImplementation 'org.springframework.boot:spring-boot-starter-webflux'
+  brokerConsumerImplementation 'org.springframework.boot:spring-boot-starter-actuator'
+  brokerConsumerImplementation 'com.alibaba.rsocket:alibaba-rsocket-spring-boot-starter:1.1.2'
 }
 
-sourceSets {
-  main {
-    java {
-      srcDirs = ['src/main/java']
-    }
-  }
-  hello {
-    java {
-      srcDirs = ['src/jbang/hello']
-    }
-  }
-}
+
