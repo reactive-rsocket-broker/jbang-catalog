@@ -1,12 +1,22 @@
 {
   "aliases": {
     "BrokerClient": {
-      "script-ref": "src/jbang/hello/RSocketBrokerClientApp.java",
+      "script-ref": "src/brokerSimpleClient/java/RSocketBrokerClientApp.java",
       "description": "A client that connects to a broker and sends a request"
     },
     "rsocket-broker": {
       "script-ref": "https://repo1.maven.org/maven2/com/alibaba/rsocket/alibaba-broker-server/1.1.2/alibaba-broker-server-1.1.2.jar",
       "description": "Start Alibaba Broker Server",
+      "java": "8"
+    },
+    "brokerService": {
+      "script-ref": "src/brokerService/java/demo/RSocketServiceApp.java",
+      "description": "RSocket Broker Service Provider",
+      "java": "8"
+    },
+    "brokerConsumer": {
+      "script-ref": "src/brokerConsumer/java/demo/RSocketConsumerApp.java",
+      "description": "RSocket Broker Service Consumer",
       "java": "8"
     }
   }
