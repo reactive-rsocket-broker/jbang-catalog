@@ -5,9 +5,9 @@
       "description": "A client that connects to a broker and sends a request"
     },
     "rsocket-broker": {
-      "script-ref": "https://repo1.maven.org/maven2/com/alibaba/rsocket/alibaba-broker-server/1.1.2/alibaba-broker-server-1.1.2.jar",
+      "script-ref": "https://repo1.maven.org/maven2/com/alibaba/rsocket/alibaba-broker-server/1.1.3/alibaba-broker-server-1.1.3.jar",
       "description": "Start Alibaba Broker Server",
-      "java": "8"
+      "java": "11"
     },
     "brokerService": {
       "script-ref": "src/brokerService/java/demo/RSocketServiceApp.java",
